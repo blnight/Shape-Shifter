@@ -12,6 +12,35 @@ S.Drawing = (function () {
                         window.setTimeout(callback, 1000 / 60);
                       };
 
+  var hexHeight,
+    hexRadius,
+    hexRectangleHeight,
+    hexRectangleWidth,
+    hexagonAngle = 0.523598776, // 30 degrees in radians
+    sideLength = 5.8;
+
+  hexHeight = Math.sin(hexagonAngle) * sideLength;
+  hexRadius = Math.cos(hexagonAngle) * sideLength;
+  hexRectangleHeight = sideLength + 2 * hexHeight;
+  hexRectangleWidth = 2 * hexRadius;
+
+  var drawHexagon = function drawHexagon(canvasContext, x, y, fill) {
+    canvasContext.beginPath();
+    canvasContext.moveTo(x + hexRadius, y);
+    canvasContext.lineTo(x + hexRectangleWidth, y + hexHeight);
+    canvasContext.lineTo(x + hexRectangleWidth, y + hexHeight + sideLength);
+    canvasContext.lineTo(x + hexRadius, y + hexRectangleHeight);
+    canvasContext.lineTo(x, y + sideLength + hexHeight);
+    canvasContext.lineTo(x, y + hexHeight);
+    canvasContext.closePath();
+
+    if(fill) {
+      canvasContext.fill();
+    } else {
+      canvasContext.stroke();
+    }
+  };
+
   return {
     init: function (el) {
       canvas = document.querySelector(el);
@@ -45,10 +74,11 @@ S.Drawing = (function () {
 
     drawCircle: function (p, c) {
       context.fillStyle = c.render();
-      context.beginPath();
-      context.arc(p.x, p.y, p.z, 0, 2 * Math.PI, true);
-      context.closePath();
-      context.fill();
+//      context.beginPath();
+//      context.arc(p.x, p.y, p.z, 0, 2 * Math.PI, true);
+//      context.closePath();
+//      context.fill();
+      drawHexagon(context, p.x, p.y, true);
     }
   };
 }());
