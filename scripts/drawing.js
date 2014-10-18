@@ -17,7 +17,7 @@ S.Drawing = (function () {
     hexRectangleHeight,
     hexRectangleWidth,
     hexagonAngle = 0.523598776, // 30 degrees in radians
-    sideLength = 5.8;
+    sideLength = 4.5;
 
   hexHeight = Math.sin(hexagonAngle) * sideLength;
   hexRadius = Math.cos(hexagonAngle) * sideLength;
@@ -34,7 +34,7 @@ S.Drawing = (function () {
     canvasContext.lineTo(x, y + hexHeight);
     canvasContext.closePath();
 
-    if(fill) {
+    if (fill) {
       canvasContext.fill();
     } else {
       canvasContext.stroke();
@@ -74,10 +74,6 @@ S.Drawing = (function () {
 
     drawCircle: function (p, c) {
       context.fillStyle = c.render();
-//      context.beginPath();
-//      context.arc(p.x, p.y, p.z, 0, 2 * Math.PI, true);
-//      context.closePath();
-//      context.fill();
       drawHexagon(context, p.x, p.y, true);
     }
   };

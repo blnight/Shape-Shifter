@@ -5,11 +5,14 @@
 
 body {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #79a8ae;
+  background: #4257cb;
   color: #666;
   font-size: 16px;
   line-height: 1.5em;
   overflow: hidden;
+    /*background: radial-gradient(circle at 85.3% 93.3%, #cc3367, transparent 66%),radial-gradient(circle at 20.62% 17.17%, #4257cb, transparent 100%),radial-gradient(circle at 88.1% 23.35%, #b22d5a, transparent 100%),radial-gradient(circle at 12.93% 80.73%, #303f9f, transparent 100%),radial-gradient(circle at 50% 50%, #c8ad45, #c8ad45 100%);*/
+    background: url(images/gradient_bg.jpg) no-repeat center;
+    background-size: cover;
 }
 
 h1 {
@@ -40,28 +43,6 @@ body,
 }
 
 .body--ready {
-  /* Ideas
-  background: -webkit-linear-gradient(top, #e2b986 -10%, #241c35 140%);
-  background: -webkit-linear-gradient(top, #c97369 -40%, #241c35 130%);
-  background: -webkit-linear-gradient(top, #fac4c4 -10%, #606386 140%);
-  background: -webkit-linear-gradient(top, #519ab0 0%, #414A6D 110%);
-  background: -webkit-linear-gradient(top, rgb(129, 0, 170) 0%, rgb(43, 4, 114) 110%);
-  background: -webkit-linear-gradient(top, rgb(163, 235, 189) 0%, rgb(16, 93, 145) 110%);
-  background: -webkit-linear-gradient(top, rgb(165, 103, 189) 0%, rgb(75, 233, 214) 120%);
-  */
-
-  /*background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
-  /*background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
-  /*background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
-  /*background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
-  /*background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
-
-  /*background: radial-gradient(circle at 2.01% 32.04%, #4CB8C4, transparent 100%),radial-gradient(circle at 97.99% 83.98%, #3CD3AD, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);*/
-  /*background: radial-gradient(circle at 2.01% 92.04%, #FF512F, transparent 100%),radial-gradient(circle at 97.99% 94.03%, #DD2476, transparent 100%),radial-gradient(circle at 50% 50%, #c8ad45, #c8ad45 100%);*/
-
-  /*background: radial-gradient(circle at 85.3% 93.3%, #cc3367, transparent 66%),radial-gradient(circle at 20.62% 17.17%, #4257cb, transparent 100%),radial-gradient(circle at 88.1% 23.35%, #b22d5a, transparent 100%),radial-gradient(circle at 12.93% 80.73%, #303f9f, transparent 100%),radial-gradient(circle at 50% 50%, #c8ad45, #c8ad45 100%);*/
-  background: url(images/gradient_bg.jpg) no-repeat center;
-  background-size: cover;
 }
 
 .body--ready .overlay {
