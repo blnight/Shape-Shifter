@@ -19,8 +19,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-//      S.UI.simulate('#icon wrench');
-      S.UI.simulate('web components');
+//      S.UI.simulate('web components'); 
     }
 
     S.Drawing.loop(function () {
@@ -28,7 +27,6 @@ var S = {
     });
   }
 };
-
 
 window.addEventListener('load', function () {
   S.init();
