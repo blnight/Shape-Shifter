@@ -26,7 +26,7 @@ var S = {
       S.Shape.render();
     });
   }
-}; 
+};
 
 window.addEventListener('load', function () {
   S.init();
